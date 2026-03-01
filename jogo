@@ -1,0 +1,32 @@
+# Jogo Pedra, Papel e Tesoura
+placar_jgum= 0
+placar_jgdois= 0
+while True:
+    print("*" * 50)
+    print(f"Bem Vindo ao jogo pedra, papel e tesoura!")
+    print(f"Digite 'sair' para encerrar o jogo")
+    print("*" * 50)
+    #Placar do jogo
+    print(f"Placar do Jogo")
+    print(f"jogador 1: {placar_jgum} x {placar_jgdois} Jogador 2")
+    #input jogadores
+    escolha_jogador = input("Jogador 1 escolha Pedra, Papel ou Tesoura: ").lower()
+    escolha_jogador2 = input("Jogador 2 escolha Pedra, Papel ou Tesoura: ").lower()
+    #Caso escolhar sair do jogo
+    if (escolha_jogador == "sair") or (escolha_jogador2 == "sair"):
+        break
+    else:
+    #Empate Técnico
+        if escolha_jogador == escolha_jogador2:
+            print(f"Deu Empate!")
+    #Jogador 1 vence
+        elif (escolha_jogador == "pedra" and escolha_jogador2 == "tesoura") or \
+            (escolha_jogador == "tesoura" and escolha_jogador2 == "papel") or \
+            (escolha_jogador == "papel" and escolha_jogador2 == "pedra"):
+            print(f"Jogador 1 venceu, Parabens!")
+            placar_jgum += 1
+    #Jogador 2 vence
+        else:
+            print(f"Jogador 2 venceu, Parabens!")
+            placar_jgdois += 1
+  
